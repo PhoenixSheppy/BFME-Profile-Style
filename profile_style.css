@@ -1,0 +1,162 @@
+/* Setup for name effects */
+
+.cover_photo_profile_information h2 {
+    font-weight: bold !important;
+    animation-name: namejitter;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+ }
+ 
+ /* Pastel color-cycle pattern */
+ 
+ .coverphoto_navigation_list li a, .tabs_alt ul li .tab_active a, .tabs_alt ul li.active a, .tabs_alt ul li a:hover, .feed_item_option_like a, .feed_item_option_comment a, .feed_item_option_edit a, .feed_item_option_delete a, .feed_item_option_share a, .feed_item_option_report a, .feed_item_option_like a:hover, .feed_item_option_comment a:hover, .feed_item_option_edit a:hover, .feed_item_option_delete a:hover, .feed_item_option_share a:hover, .feed_item_option_report a:hover, .feed_item_option_unlike a, .feed_item_option_unlike a:hover {
+     animation-name: rainbowroad;
+     animation-duration: 5s;
+     animation-iteration-count: infinite;
+     color: black !important;
+ }
+ 
+/* Change text to black, otherwise not visible ontop of pastels */
+
+ .coverphoto_navigation_list li a span, .coverphoto_navigation_list li a i {
+     color: black !important;
+ }
+ 
+ /* Pastel color-cycle pattern for icons specifically */
+ 
+ .emoticons-activator::before, .user_profile_info .profile_type:before, .user_profile_info .profile_views:before, .user_profile_info .profile_friends:before, .user_profile_info .profile_updates:before, .user_profile_info .profile_login:before, .user_profile_info .profile_joined:before, .user_profile_info .profile_level:before {
+     animation-name: rainbowroad2;
+     animation-duration: 5s;
+     animation-iteration-count: infinite;
+ }
+ 
+ /* Hide user message / note field for re-write */
+ 
+ .overTxtLabel {
+     display: none !important;
+ }
+ 
+ /* Re-write user message / note field */
+
+ .compose-content::after {
+       content: "Swend mwe a mwessage pwease! ";
+     }
+
+/* Add "friends suffix" */
+ 
+ .cover_photo_stats::after {
+      content: "of Bluey";
+ }
+
+ /* Setup for profile icon effects */
+ 
+ .main_thumb_photo, .bg_item_photo_user {
+     animation-name: rotatepicture;
+     animation-duration: 5s;
+     animation-iteration-count: infinite;
+ }
+ 
+/* Member Info Edits */
+
+/* Clear out profile type */
+ 
+ .profile_type div   {
+     display: none !important;
+ }
+
+ /* Overwrite profile type */
+
+ .user_profile_info ul li:first-child::after {
+    content: "Profile Type: Puppy";
+}
+ 
+/* Clear profile level */
+
+ .profile_level div {
+     display: none !important;
+ }
+ 
+/* Overwrite profile level */
+ 
+ .user_profile_info ul li:last-child::after {
+      content: "Profile Level: ur mom";
+ }
+
+/* Clear profile join date */
+ 
+ li.profile_joined div {
+     display: none !important;
+ }
+
+/* Overwrite profile join date */
+ 
+ li.profile_joined::after {
+     content: "Joined: A Long, Long Time Ago";
+     font-size: 0.8rem;
+ }
+
+/* Set border of profile icon, and top wrapper */
+ 
+ #user_profile_photo, .profile_cover_wrapper, activity-item {
+     border: 5px solid #33416a !important;
+ }
+ 
+/* Set custom background */
+
+ body {
+     background: url('https://cdn.gsheps.com/u/B3f9ht.png') center center no-repeat !important;
+     background-size: cover !important;
+     background-attachment: fixed !important;
+     background-color: black !important;
+ }
+
+ /* Animations */
+ 
+/* I cannot believe I actually had to graph this out to see how it would play lol */
+
+/* Bounces username in a "gremlin mode" fashion */
+
+ @keyframes namejitter {
+    0% {transform: translate(0px, 0px);}
+    10% {transform: translate(5px, 0px);}
+    20% {transform: translate(0px, 0px);}
+    30% {transform: translate(-5px, 0px);}
+    40% {transform: translate(0px, 0px);}
+    50% {transform: translate(0px, 5px);}
+    60% {transform: translate(0px, 0px);}
+    70% {transform: translate(0px, -5px);}
+    80% {transform: translate(0px, 0px);}
+    90% {transform: translate(5px, 0px);}
+    100% {transform: translate(0px, 0px);}
+}
+
+/* Pastel color-cycle pattern */
+
+@keyframes rainbowroad {
+    0% {background-color: #ffadad;}
+    20% {background-color: #ffd6a5;}
+    40% {background-color: #fdffb6;}
+    60% {background-color: #caffbf;}
+    80% {background-color: #a0c4ff;}
+    100% {background-color: #bdb2ff;}
+}
+
+/* Pastel color-cycle pattern for icons specifically */
+
+@keyframes rainbowroad2 {
+    0% {color: #ffadad;}
+    20% {color: #ffd6a5;}
+    40% {color: #fdffb6;}
+    60% {color: #caffbf;}
+    80% {color: #a0c4ff;}
+    100% {color: #bdb2ff;}
+}
+
+/* Profile icon animation */
+
+@keyframes rotatepicture {
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
